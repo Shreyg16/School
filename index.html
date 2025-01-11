@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Francis International School</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <div class="logo">Dream Francis <span class="highlight"> International School </span> </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to <span class="highlight">Dream Francis</span> International School</h1>
+            <p>Nurturing minds, Inspiring futures</p>
+            <div class="color-bar"></div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Dream Francis International School is committed to providing a world-class education that empowers students to become global citizens and lifelong learners.</p>
+            <img src="/images/bnr-1.jpg?height=300&width=400" alt="School building" class="school-image"> 
+        </section>
+
+        <section id="programs" class="programs">
+            <h2>Our Programs</h2>
+            <div class="program-grid">
+                <div class="program-card">
+                    <div class="card-header elementary"></div>
+                    <img src="/images/Gallery 1.jpg" alt="Elementary program">
+                    <h3>Elementary</h3>
+                    <p>Building a strong foundation for lifelong learning.</p>
+                </div>
+                <div class="program-card">
+                    <div class="card-header middle-school"></div>
+                    <img src="/images//Gallery 2.jpg" alt="Middle School program">
+                    <h3>Middle School</h3>
+                    <p>Fostering curiosity and critical thinking skills.</p>
+                </div>
+                <div class="program-card">
+                    <div class="card-header high-school"></div>
+                    <img src="/images//Gallery 3.jpg" alt="High School program">
+                    <h3>High School</h3>
+                    <p>Preparing students for higher education and beyond.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2>School Gallery</h2>
+            <div class="gallery-grid">
+                <img src="/images/Event 1.jpg" alt="School event 1">
+                <img src="/images//Event 2.jpg" alt="School event 2">
+                <img src="/images//Event 3.jpg" alt="School event 3">
+                <img src="/images/Event 4.jpg" alt="School event 4">
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Dream Francis International School. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+
+                burger.classList.toggle('toggle');
+            });
+        }
+
+        navSlide();
+    </script>
+</body>
+</html>
+
